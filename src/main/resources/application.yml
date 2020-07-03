@@ -13,6 +13,12 @@ spring:
     hibernate:
       ddl-auto: none
 
+security:
+  jwt:
+    token:
+      secret-key: TalkIsCheapShowMeTheCodeByLinusTorvaldsTalkIsCheapShowMeTheCodeByLinusTorvalds
+      validate-duration: 30M
+
 ---
 spring:
   profiles: local
