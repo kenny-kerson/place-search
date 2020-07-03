@@ -1,4 +1,4 @@
-package com.namkyujin.search.core.domain;
+package com.namkyujin.search.search.domain;
 
 import lombok.AccessLevel;
 import lombok.Builder;
