@@ -16,7 +16,7 @@ public class SecurityConfig implements WebMvcConfigurer {
     public FilterRegistrationBean authenticationFilter(JwtTokenProvider jwtTokenProvider) {
         FilterRegistrationBean<AuthenticationFilter> registrationBean = new FilterRegistrationBean<>();
         registrationBean.setFilter(new AuthenticationFilter(jwtTokenProvider));
-        registrationBean.addUrlPatterns("/search");
+        registrationBean.addUrlPatterns("/v1/search");
 
         return registrationBean;
     }
