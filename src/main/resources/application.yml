@@ -19,6 +19,9 @@ security:
       secret-key: TalkIsCheapShowMeTheCodeByLinusTorvaldsTalkIsCheapShowMeTheCodeByLinusTorvalds
       validate-duration: 30M
 
+search:
+  mode: FAST_FAIL # HA | FAST_FAIL
+
 circuit:
   wait-duration-in-open-state: 3s
   failure-count-threshold: 10
