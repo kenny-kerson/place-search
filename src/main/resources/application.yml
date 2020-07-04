@@ -19,6 +19,19 @@ security:
       secret-key: TalkIsCheapShowMeTheCodeByLinusTorvaldsTalkIsCheapShowMeTheCodeByLinusTorvalds
       validate-duration: 30M
 
+api-client:
+  kakao:
+    max-total: 100 # Connection Pool 최대 사이즈
+    default-max-per-route: 100 # 대상 Host (IP + PORT) 당 생성 가능 Pool 의 Connection 수
+    connection-timeout: 1000 # 커넥션 타임아웃
+    read-timeout: 1000 # 리드 타임아웃
+    scheme: https
+    host: dapi.kakao.com
+    headers:
+      Authorization: KakaoAK ${kakao.key}
+
+kakao.key: FIXME-INPUT-YOUR-KEY
+
 ---
 spring:
   profiles: local
