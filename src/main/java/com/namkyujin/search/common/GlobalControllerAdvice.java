@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class GlobalControllerAdvice {
 
+    @ExceptionHandler({IllegalArgumentException.class})
+    public ResponseEntity<CommonResponse<Object>> handleBadRequest(Exception e) {
+        return handleError(HttpStatus.BAD_REQUEST, e);
+    }
 
     @ExceptionHandler({LoginFailedException.class, AuthenticationException.class})
     public ResponseEntity<CommonResponse<Object>> handleUnauthorized(Exception e) {
