@@ -19,6 +19,10 @@ security:
       secret-key: TalkIsCheapShowMeTheCodeByLinusTorvaldsTalkIsCheapShowMeTheCodeByLinusTorvalds
       validate-duration: 30M
 
+circuit:
+  wait-duration-in-open-state: 3s
+  failure-count-threshold: 10
+
 api-client:
   kakao:
     max-total: 100 # Connection Pool 최대 사이즈
